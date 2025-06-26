@@ -1,0 +1,44 @@
+#educationTimer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Work time styling */
+#educationTimer.work-mode {
+  background-color: #2e7d32; /* Dark green */
+  color: white;
+  border: 2px solid #1b5e20;
+}
+
+/* Break time styling */
+#educationTimer.break-mode {
+  background-color: #c62828; /* Dark red */
+  color: white;
+  border: 2px solid #b71c1c;
+}
+
+/* Animation for time change */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.time-change {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Notification style (for Chrome notifications) */
+.notification {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}

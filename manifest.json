@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Education Timer",
+  "version": "1.0",
+  "description": "30-minute work / 10-minute break timer",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["content.js", "styles.css"],
+    "matches": ["<all_urls>"]
+  }]
+}
